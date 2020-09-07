@@ -31,9 +31,7 @@ Activate Anti-spam protection in your BM by this command :
 
 Made from the source code of [Aditya 🇮🇳](t.me/xditya) by [Dark_Knight](t.me/Userge_dark)
 
-Deploy a bot like me [now](www.github.com/xditya/GroupManager)
-
-Watch [video tutorial](https://www.youtube.com/watch?v=gXXFpTAk6Vo&feature=youtu.be) on deploying me.
+Thanks to  [Missy](t.me/demogod_1) for helping me.
 
 Click /help or Help button below to find out more about how to use me to my full potential.
 
