@@ -29,11 +29,11 @@ I'm group manager bot and Anti-spam for RR Players🃏
 Activate Anti-spam protection in your BM by this command : 
 /antispam on 
 
-Made from the source code of [Aditya] (t.me/xditya) 🇮🇳 by [Dark_Knight] (t.me/Dark047)
+Made  by [DARK] (t.me/Dark047)
 
-Deploy a bot like me [now] (http://www.github.com/xditya/GroupManager)
+Thanks to [Adi] (t.me/xditya) and [Missy] (t.me/demogod_1)
 
-Watch [video tutorial] (https://www.youtube.com/watch?v=gXXFpTAk6Vo&feature=youtu.be) on deploying me.
+Deploy a bot like me [now] (http://www.github.com/dark12knight/knight2.0)
 
 Click /help or Help button below to find out more about how to use me to my full potential.
 
