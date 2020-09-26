@@ -1,7 +1,4 @@
-
-
-
-@groupmannegment.on_cmd(
+.on_cmd(
     "ping", about={'header': "check how long it takes to ping your userbot"})
 async def pingme(message: Message):
     start = datetime.now()
