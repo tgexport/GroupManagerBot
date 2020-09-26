@@ -1,4 +1,4 @@
-# Copyright (C) 2020 by UsergeTeam@Github, < https://github.com/UsergeTeam >.
+# Copyright (C) 2020 by dark12knight@Github, < https://github.com/dark12knight >.
 #
 # This file is part of < https://github.com/UsergeTeam/Userge > project,
 # and is released under the "GNU v3.0 License Agreement".
@@ -7,11 +7,11 @@
 # All rights reserved.
 
 from datetime import datetime
-from userge import userge, Message
+from knight2.0 import knight2.0, Message
 
 
-@userge.on_cmd(
-    "ping", about={'header': "check how long it takes to ping your userbot"})
+@knight2.0.on_cmd(
+    "ping", about={'header': "check how long it takes to ping your bot"})
 async def pingme(message: Message):
     start = datetime.now()
     await message.edit('`Pong!`')
