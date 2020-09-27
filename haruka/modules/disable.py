@@ -164,8 +164,8 @@ It'll also allow you to autodelete them, stopping people from bluetexting.
  - /cmds: check the current status of disabled commands
 
 *Admin only:*
- - /enable <cmd name>: enable that command
- - /disable <cmd name>: disable that command
+ - /enable <cmd name>: Enable that command
+ - /disable <cmd name>: Disable that command
  - /listcmds: list all possible toggleable commands
     """
 
