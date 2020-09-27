@@ -279,6 +279,7 @@ __help__ = """
  - /invitelink: gets invitelink
  - /promote: promotes the user replied to
  - /demote: demotes the user replied to
+ - /ping: reply as "Okay @dark047✅
 """
 
 __mod_name__ = "Admin"
@@ -302,3 +303,4 @@ dispatcher.add_handler(PROMOTE_HANDLER)
 dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(ADMINLIST_HANDLER)
 dispatcher.add_handler(REACT_HANDLER)
+dispatcher.add_handler(PING_HANDLER)
