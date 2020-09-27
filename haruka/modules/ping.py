@@ -1,3 +1,6 @@
+
+
+
 @run_async.on_cmd(
     "!ping", about={'header': "check how long it takes to ping your bot"})
 async def pingme(message: Message):
