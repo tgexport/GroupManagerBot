@@ -208,9 +208,7 @@ def control_panel(bot, update):
                 text += f"\nConnected chat - *{chatG.title}* (you {member.status})"
                 keyboard += [[InlineKeyboardButton(text="👥 Group settings", callback_data="cntrl_panel_G_back")]]
             elif user.id in SUDO_USERS:
-                text += f"\nConnected chat - *{chat
-
-G.title}* (you sudo)"
+                text += f"\nConnected chat - *{chatG.title}* (you sudo)"
                 keyboard += [[InlineKeyboardButton(text="👥 Group settings (SUDO)", callback_data="cntrl_panel_G_back")]]
             else:
                 text += f"\nConnected chat - *{chatG.title}* (you aren't an admin!)"
