@@ -1,3 +1,4 @@
+ƊƛƦƘƖ:
 import datetime
 import importlib
 import re
@@ -105,7 +106,7 @@ def send_help(chat_id, text, keyboard=None):
 @run_async
 def test(bot: Bot, update: Update):
     #pprint(eval(str(update)))
-    #update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+    #update.effective_message.reply_text("Hola tester! _I_ *have* markdown", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
@@ -115,12 +116,14 @@ def start(bot: Bot, update: Update, args: List[str]):
     LOGGER.info("Start")
     chat = update.effective_chat  # type: Optional[Chat]
     #query = update.callback_query #Unused variable
-    if update.effective_chat.type == "private":
+    if update.effective_chat.typ
+
+e == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
                 send_help(update.effective_chat.id, tld(chat.id, "send-help").format(
                      dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(
-                         chat.id, "\nAll commands can either be used with `/` or `!`.\n"
+                         chat.id, "\nAll commands can either be used with / or !.\n"
                              )))
 
             elif args[0].lower().startswith("stngs_"):
@@ -140,10 +143,10 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("I'm"Online")
+        update.effective_message.reply_text("I'm"ONLINE Report Sent to @Dark047")
 
 def send_start(bot, update):
-
+    #Try to remove old message
     try:
         query = update.callback_query
         query.message.delete()
@@ -211,7 +214,8 @@ def control_panel(bot, update):
                 keyboard += [[InlineKeyboardButton(text="👥 Group settings (SUDO)", callback_data="cntrl_panel_G_back")]]
             else:
                 text += f"\nConnected chat - *{chatG.title}* (you aren't an admin!)"
-        else:
+
+else:
             text += "\nNo chat connected!"
 
         keyboard += [[InlineKeyboardButton(text="Back", callback_data="bot_start")]]
@@ -307,7 +311,9 @@ def error_callback(bot, update, error):
     except Unauthorized:
         LOGGER.warning("NO NONO1")
         LOGGER.warning(error)
-        # remove update.message.chat_id from conversation list
+        # remove update.message.chat_id from conversation li
+
+st
     except BadRequest:
         LOGGER.warning("NO NONO2")
         LOGGER.warning("BadRequest caught")
@@ -354,20 +360,20 @@ def help_button(bot: Bot, update: Update):
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
-            query.message.reply_text(tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with `/` or `!`.\n")),
+            query.message.reply_text(tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with / or !.\n")),
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(chat.id, curr_page - 1, HELPABLE, "help")))
 
         elif next_match:
             next_page = int(next_match.group(1))
-            query.message.reply_text(tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with `/` or `!`.\n")),
+            query.message.reply_text(tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with / or !.\n")),
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(chat.id, next_page + 1, HELPABLE, "help")))
 
         elif back_match:
-            query.message.reply_text(text=tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with `/` or `!`.\n")),
+            query.message.reply_text(text=tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with / or !.\n")),
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(chat.id, 0, HELPABLE, "help")))
@@ -397,7 +403,9 @@ def get_help(bot: Bot, update: Update):
     if chat.type != chat.PRIVATE:
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
-                                            reply_markup=InlineKeyboardMarkup(
+                                            reply_markup=InlineKeyboardMa
+
+rkup(
                                                 [[InlineKeyboardButton(text="Help",
                                                                        url="t.me/{}?start=help".format(
                                                                            bot.username))]]))
@@ -416,7 +424,7 @@ def get_help(bot: Bot, update: Update):
 
     else:
         send_help(chat.id, tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(
-            chat.id, "\nAll commands can either be used with `/` or `!`.\n"
+            chat.id, "\nAll commands can either be used with / or !.\n"
                 )))
 
 def send_settings(chat_id, user_id, user=False):
@@ -473,7 +481,8 @@ def settings_button(bot: Bot, update: Update):
             chat_id = prev_match.group(1)
             curr_page = int(prev_match.group(2))
             chat = bot.get_chat(chat_id)
-            query.message.reply_text(tld(user.id, "send-group-settings").format(chat.title),
+
+query.message.reply_text(tld(user.id, "send-group-settings").format(chat.title),
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(curr_page - 1, CHAT_SETTINGS, "stngs",
                                                           chat=chat_id)))
@@ -568,7 +577,9 @@ def main():
     dispatcher.add_handler(cntrl_panel)
 
     settings_handler = CommandHandler("settings", get_settings)
-    settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
+    settings_callback_handler = CallbackQueryHandler(se
+
+ttings_button, pattern=r"stngs_")
 
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
@@ -658,7 +669,7 @@ def process_update(self, update):
             self.logger.exception('An uncaught error was raised while processing the update')
 
 
-if __name__ == '__main__':
+if name == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     LOGGER.info("Successfully loaded")
     main()
