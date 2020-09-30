@@ -108,9 +108,7 @@ def test(bot: Bot, update: Update):
     #pprint(eval(str(update)))
     #update.effective_message.reply_text("Hola tester! _I_ *have* markdown", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
-    print(upda
-
-te.effective_message)
+    print(update.effective_message)
 
 
 @run_async
@@ -143,7 +141,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("I'm Online")
+        update.effective_message.reply_text("☮️I'm Online💐")
 
 def send_start(bot, update):
     #Try to remove old message
