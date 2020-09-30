@@ -1,6 +1,6 @@
 
 
-heruka.on_cmd(
+gitHub.on_cmd(
     "!ping", about={'header': " def pingme(message: Message):
     start = datetime.now()
     await message.edit('Pong!')
