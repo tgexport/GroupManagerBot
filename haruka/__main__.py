@@ -392,9 +392,7 @@ def help_button(bot: Bot, update: Update):
 @run_async
 def get_help(bot: Bot, update: Update):
     chat = update.effective_chat  # type: Optional[Chat]
-    args = update.effective_message.text
-
-.split(None, 1)
+    args = update.effective_message.text.split(None, 1)
 
     # ONLY send help in PM
     if chat.type != chat.PRIVATE:
