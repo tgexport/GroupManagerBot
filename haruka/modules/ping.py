@@ -1,6 +1,6 @@
 
 
-@knight2.0.on_cmd(
+.on_cmd(
     "!ping", about={'header': " def pingme(message: Message):
     start = datetime.now()
     await message.edit('Pong!')
