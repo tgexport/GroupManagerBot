@@ -29,7 +29,7 @@ I'm group manager bot and Anti-spam for RR Players🃏
 Activate Anti-spam protection in your BM by this command : 
 /antispam on 
 
-Made  by [DARK] @Dark047)
+Made  by [DARK] @Dark047
 
 Thanks to ADITYA 
 
@@ -140,10 +140,19 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("I'm alive")
+        update.effective_message.reply_text("I'm"Online")
 
 def send_start(bot, update):
-    #Try to remove old message
+  
+    else: 
+        update.effective_message.reply_text
+   send_ping(bot,update)
+    start = datetime.now()
+    await message.edit('Pong!')
+    end = datetime.now()
+    m_s = (end - start).microseconds / 1000
+    await message.edit💎(f"**Pong!**\n{m_s} ms ✅")
+#Try to remove old message
     try:
         query = update.callback_query
         query.message.delete()
