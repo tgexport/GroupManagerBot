@@ -298,9 +298,7 @@ def control_panel(bot, update):
         elif back_match:
             text = "Test"
             query.message.reply_text(text=text, parse_mode=ParseMode.MARKDOWN,
-                reply_markup=InlineKeyboardMarkup(paginate_modules(user.id, 0, CHAT_SETTINGS, "cntrl
-
-_panel_G")))
+                reply_markup=InlineKeyboardMarkup(paginate_modules(user.id, 0, CHAT_SETTINGS, "cntrl_panel_G")))
 
 
 # for test purposes
@@ -570,9 +568,7 @@ def main():
     dispatcher.add_handler(start_callback_handler)
 
     cntrl_panel = CommandHandler("controlpanel", control_panel)
-    cntrl_panel_callback_handler = CallbackQueryHandler(co
-
-ntrol_panel, pattern=r"cntrl_panel")
+    cntrl_panel_callback_handler = CallbackQueryHandler(control_panel, pattern=r"cntrl_panel")
     dispatcher.add_handler(cntrl_panel_callback_handler)
     dispatcher.add_handler(cntrl_panel)
 
