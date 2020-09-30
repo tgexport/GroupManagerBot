@@ -143,15 +143,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         update.effective_message.reply_text("I'm"Online")
 
 def send_start(bot, update):
-  
-    else: 
-       
-   send_ping(bot,update)
-    update.effective_message.reply_text await message.edit('Pong!')
-    end = datetime.now()
-    m_s = (end - start).microseconds / 1000
-    await message.edit💎(f"**Pong!**\n{m_s} ms ✅")
-#Try to remove old message
+
     try:
         query = update.callback_query
         query.message.delete()
