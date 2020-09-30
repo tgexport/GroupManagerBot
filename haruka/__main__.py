@@ -115,9 +115,7 @@ def start(bot: Bot, update: Update, args: List[str]):
     LOGGER.info("Start")
     chat = update.effective_chat  # type: Optional[Chat]
     #query = update.callback_query #Unused variable
-    if update.effective_chat.typ
-
-e == "private":
+    if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
                 send_help(update.effective_chat.id, tld(chat.id, "send-help").format(
