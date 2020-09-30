@@ -145,10 +145,9 @@ def start(bot: Bot, update: Update, args: List[str]):
 def send_start(bot, update):
   
     else: 
-        update.effective_message.reply_text
+       
    send_ping(bot,update)
-    start = datetime.now()
-    await message.edit('Pong!')
+    update.effective_message.reply_text await message.edit('Pong!')
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
     await message.edit💎(f"**Pong!**\n{m_s} ms ✅")
