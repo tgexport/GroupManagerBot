@@ -1,6 +1,6 @@
 
 
-telegram.on_cmd(
+heruka.on_cmd(
     "!ping", about={'header': " def pingme(message: Message):
     start = datetime.now()
     await message.edit('Pong!')
