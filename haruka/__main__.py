@@ -140,8 +140,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("I'm"ONLINE Report Sent to @Dark047")
-
+        update.effective_message.reply_text("I'm ONLINE Tnx @Dark047")
 def send_start(bot, update):
     #Try to remove old message
     try:
