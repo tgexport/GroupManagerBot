@@ -660,6 +660,7 @@ def process_update(self, update):
         except Exception:
             self.logger.exception('An uncaught error was raised while processing the update')
 
+
 if name = "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     LOGGER.info("Successfully loaded")
