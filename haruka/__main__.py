@@ -53,7 +53,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 GDPR = []
-
+    
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("haruka.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
@@ -660,7 +660,7 @@ def process_update(self, update):
         except Exception:
             self.logger.exception('An uncaught error was raised while processing the update')
 
-if name == '__main__':
+if name = "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     LOGGER.info("Successfully loaded")
     main()
