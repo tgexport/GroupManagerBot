@@ -140,7 +140,8 @@ def start(bot: Bot, update: Update, args: List[str]):
                 control_panel(bot, update)
     else: 
         send_ping(bot,update)
-          update.effective_message.reply_text("pong")                 
+       eles:
+        update.effective_message.reply_text("pong")                 
 def pingme(message: Message):  
     start = datetime.now()
     a = await message.reply('Pong!')
