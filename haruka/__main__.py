@@ -138,7 +138,20 @@ def start(bot: Bot, update: Update, args: List[str]):
 
             elif args[0].lower() == "controlpanel":
                 control_panel(bot, update)
-        else:
+        
+else:
+           send_ping(bot,update)
+    else: 
+       update.effective_message.reply_text("pong")
+       
+   def pingme(message: Message):
+    start = datetime.now()
+    await message.edit('Pong!')
+    end = datetime.now()
+    m_s = (end - start).microseconds / 1000
+    await message.edit💎(f"**Pong!**\n{m_s} ms ✅")
+
+else:
             send_start(bot, update)
     else:
         update.effective_message.reply_text("☮️I'm Online💐")
