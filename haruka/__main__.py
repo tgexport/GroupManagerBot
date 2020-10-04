@@ -138,8 +138,8 @@ def start(bot: Bot, update: Update, args: List[str]):
 
             elif args[0].lower() == "controlpanel":
                 control_panel(bot, update)
-         else:
-            send_start(bot, update)
+          else:
+             send_start(bot, update)
      else:
         update.effective_message.reply_text("☮️I'm Online💐")
 
