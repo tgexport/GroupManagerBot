@@ -29,11 +29,7 @@ I'm group manager bot and Anti-spam for RR Players🃏
 Activate Anti-spam protection in your BM by this command : 
 /antispam on 
 
-Made  by [DARK] @Dark047
-
-Thanks to ADITYA 
-
-Deploy a bot like me [now] (http://www.github.com/dark12knight/knight2.0)
+Made  by [Avishkar] @Avishkarpatil
 
 Click /help or Help button below to find out more about how to use me to my full potential.
 
@@ -188,7 +184,7 @@ def control_panel(bot, update):
 
         LOGGER.info(query.data)
     else:
-        M_match = "ThaNos is the best bot" #LMAO, don't uncomment
+        M_match = "EDITH USER BOT is the best bot" #LMAO, don't uncomment
 
     if M_match:
         text = "*Control panel* 🛠"
